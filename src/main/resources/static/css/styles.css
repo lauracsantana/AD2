@@ -1,0 +1,1761 @@
+/* ----------------------------------------------- 1 - animation page  --------------------------------------------------------*/  
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #E7CCCC;
+}
+
+.falling-money-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.money {
+  position: absolute;
+  width: 50px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.full-page-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100; /* Make sure it sits above other content */
+  background: transparent; /* Ensures it doesn’t interfere visually */
+  cursor: pointer; /* Changes cursor to indicate clickable area */
+  text-decoration: none;
+}
+/* ----------------------------------------------- 2- index - initial page  --------------------------------------------------------*/  
+
+@font-face {
+  font-family: 'KCBubbleShack';
+  src: url('../fonts/KCBubbleShack.otf') format('truetype')
+}
+
+@font-face {
+  font-family: 'KCBeebosloth';
+  src: url('../fonts/KCBeebosloth.otf') format('truetype');
+}
+
+
+* {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+  }
+  
+  body {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .body_index-page{
+    font-family: 'KCBeebosloth',Arial, Helvetica, sans-serif;
+    background-image: url('../images/gradient_3.png');
+  }
+
+  .container_index {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Logo/Header Styling */
+  .header .logo {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation Links Styling */
+  .nav-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .nav-link {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #ffb6c1;
+  }
+  
+  /* Footer */
+  .footer_index {
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .footer_image_girls_have_funds {
+    height: 0.2px;
+    bottom: 20px;
+    margin-top: 60px;
+
+  }
+
+
+/* ----------------------------------------------- 3- login page --------------------------------------------------------*/  
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background and layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0d2d3, #d7e9c4);
+}
+
+
+.body_login-page{
+  background-image: url('../images/gradient_4.png');
+  font-family: 'KCBeebosloth',sans-serif;
+}
+
+
+/* Container for login elements */
+.login-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  opacity: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo image */
+.logo img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Welcome text */
+.welcome-text {
+  font-size: 1.5rem;
+  color: #d27b7b;
+  margin-bottom: 30px;
+}
+
+/* Login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form labels */
+.login-form label {
+  font-size: 1rem;
+  color: #6d6d6d;
+  text-align: left;
+}
+
+/* Input fields */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #a2d5c6;
+  border-radius: 5px;
+  color: #555;
+  background-color: #f4f8f7;
+  outline: none;
+}
+
+/* Button */
+.submit-button {
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #d27b7b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #c16767;
+}
+
+/* ----------------------------------------------- 4- create account page --------------------------------------------------------*/  
+/* General styling for body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'KCBubbleShack', sans-serif;
+  background-image: url('images/background.png'); /* Replace with actual background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: hsl(345, 22%, 96%);
+}
+
+.create-account-page{
+  background-image: url('../images/gradient_5.png');
+  font-family: 'KCBeebosloth';
+}
+
+/* Container styling */
+.create-account-container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Header styling */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-form label {
+  text-align: left;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.account-form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: 1px solid hsl(345, 22%, 90%);
+  border-radius: 5px;
+}
+
+.account-form input::placeholder {
+  color: hsl(145, 22%, 70%);
+}
+
+button {
+  background-color: hsl(345, 22%, 96%);
+  color: hsl(145, 22%, 30%);
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+/* Money image styling */
+.money-image {
+  margin-top: 20px;
+}
+
+.money-image img {
+  width: 80%; /* Adjust size as needed */
+  max-width: 200px;
+}
+
+/* ----------------------------------------------- 5 - plans page --------------------------------------------------------*/  
+/* General styling for body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'KCBubbleShack', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: hsl(345, 22%, 96%);
+}
+
+.plans-page{
+  background-image: url('../images/gradient.png');
+  font-family: 'KCBubbleShack', sans-serif;
+}
+
+/* Container styling */
+.plans-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Header styling */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Premium info section */
+.premium-info {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+/* Plans section */
+.plan-options {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.plan {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.plan h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.plan p {
+  margin: 5px 0 0;
+}
+
+/* Footer image styling */
+.footer_image_plans {
+  margin-top: 20px;
+}
+
+.footer_image_plans img {
+  width: 50%;
+  max-width: 100px;
+}
+
+/* ----------------------------------------------- 6 - home page --------------------------------------------------------*/  
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'KCBeebosloth', sans-serif;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  background-image: url('../images/gradient_5.png');
+  align-items: center;
+  height: 100vh;
+  font-family: 'KCBeebosloth';
+  color: hsl(0, 100%, 100%);
+}
+
+/* Header for Logo */
+.header_for_logo {
+  position: absolute;
+  top: 110px;
+  left: 500px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Menu */
+.menu_home_page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 40px;
+}
+
+.menu h2 {
+  font-family: 'KCBeebosloth';
+  font-size: 2.5rem;
+  color: hwb(0 100% 0%);
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu h2:hover {
+  color: #ff8aa3;
+  transform: translateX(10px);
+}
+
+/* Floating Cash and Coins */
+.coins_bills {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.coins_bills img {
+  width: 140px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-50px);
+  }
+}
+
+/* Decorative Line at Bottom */
+.footer-line {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #ff8aa3;
+  opacity: 0.6;
+}
+/* ----------------------------------------------- 7- expenses page --------------------------------------------------------*/  
+
+
+body {
+  font-family: 'KCBeebosloth', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  opacity: 0.9;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.expenses-page {
+  background-image: url('../images/gradient_3.png');
+}
+
+/* Container Styling */
+.header_for_expenses_title {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: 20px;
+  max-width: 1200px;
+}
+
+/* Logo/Header Styling */
+.header_for_expenses_title {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Navigation Links Styling */
+.nav-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffb6c1;
+}
+
+.nav-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffb6c1;
+  margin-top: 5px;
+}
+
+/* Expenses Page Specific Styles */
+.expenses-container {
+  background-color: hsla(0, 100%, 99%, 0.649);
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 30px;
+  position: relative;
+}
+
+
+.expenses-box {
+  background-color: rgba(243, 247, 236, 0.8);
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.expense-item {
+  font-size: 1.1rem;
+  color: #4c714f;
+  text-align: left;
+  margin: 8px 0;
+  padding-left: 10px;
+  border-left: 4px solid #6b8657;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.buttons_expenses {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.button {
+  background-color: #d7ebd1;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #5d8153;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #bdd7ba;
+  transform: translateY(-2px);
+}
+
+.add-button_expenses {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 2rem;
+  color: #a1c09e;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.add-button:hover {
+  background-color: #a1c09e;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.bottom-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 3rem;
+  color: #ffb6c1;
+}
+
+/* Footer Styling */
+ .footer_expenses {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.footer_image_bag_with_money img {
+  width: 200px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-options {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .header .logo {
+      width: 250px;
+  }
+
+  .expenses-box {
+      width: 100%;
+  }
+
+  .buttons {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .add-button {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+  }
+}
+
+
+/* ----------------------------------------------- 8 - add income page --------------------------------------------------------*/  
+/* Body Styling for Add Income Page */
+
+body {
+  font-family: 'KCBeebosloth', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.add-income-page {
+  background-image: url('../images/gradient_3.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: hsl(0, 0%, 100%);
+}
+
+/* Container Styling for Add Income */
+.container_add-income {
+
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Header Styling for Income */
+.income-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(0, 100%, 100%);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Form Styling for Income */
+.income-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.income-form label {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.income-form input[type="text"],
+.income-form input[type="date"] {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #c5e1a5;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #3a3a3a;
+  transition: border-color 0.3s;
+}
+
+.income-form input[type="text"]:focus,
+.income-form input[type="date"]:focus {
+  border-bottom: 2px solid #4caf50;
+  outline: none;
+}
+
+/* Piggy Bank Icon Styling */
+.piggy-bank-icon {
+  position: absolute;
+  bottom: 100px;
+  right: 300px;
+  width: 100px;
+}
+
+.piggy-bank-icon img {
+  width: 150%;
+  opacity: 1;
+}
+
+
+/* ----------------------------------------------- 9- add expenses page --------------------------------------------------------*/  
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+.add-expense-page {
+  font-family: 'KCBeebosloth', sans-serif;
+  background-image: url('../images/gradient_3.png');
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: hsl(0, 0%, 100%);
+}
+
+/* Container Styling */
+.container_add-expense {
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  position: relative;
+}
+
+.expense_left_side {
+  display: flex;
+  flex-direction: column;
+  gap: 150px ;
+}
+
+/* Header Styling */
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  bottom: 400px;
+  left: 270px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  bottom: 400px;
+  left: 270px;
+  color: hsl(0, 100%, 99%);
+}
+
+
+.add-icon {
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: 2px solid #c5e1a5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4caf50;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.add-icon:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Form Styling */
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.expense-form label {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.expense-form input[type="text"],
+.expense-form input[type="date"] {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #c5e1a5;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #3a3a3a;
+  transition: border-color 0.3s;
+}
+
+.expense-form input[type="text"]:focus,
+.expense-form input[type="date"]:focus {
+  border-bottom: 2px solid #4caf50;
+  outline: none;
+}
+
+/* Wallet Icon Styling */
+.wallet_coins_bills {
+  position: absolute;
+  bottom: 200px;
+  left: 270px;
+  width: 100px;
+}
+
+.wallet_coins_bills img {
+  width: 150%;
+  opacity: 1;
+}
+
+
+
+/* ----------------------------------------------- 10- planning page --------------------------------------------------------*/  
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'KCBeebosloth';
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.planning-page {
+  display: flex;
+  justify-content: center;
+  background-image: url('../images/gradient_4.png');
+  align-items: center;
+  height: 100vh;
+  font-family: 'KCBeebosloth';
+  color: hsl(0, 0%, 98%);
+}
+
+/* Header for titles */
+.header_for_title_planning {
+  position: absolute;
+  top: 100px;
+  left: 500px;
+}
+
+.planning_title_image{
+  width: 100px;
+  height: auto;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Menu */
+.menu_planning {
+  display: flex;
+  flex-direction: flex;
+  gap: 50px;
+  margin-left: 40px;
+}
+
+.menu h2 {
+  font-family: 'KCBeebosloth';
+  font-size: 2.5rem;
+  color: hwb(0 100% 0%);
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu h2:hover {
+  color: #ff8aa3;
+  transform: translateX(10px);
+}
+
+/* footer */
+.footer_planning {
+  position:absolute;
+  right: 500px;
+  top: 450px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: flex;
+  gap: 500px;
+
+}
+
+.wallet_image img {
+  width: 140px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.pile_coins_image {
+  width: 140px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* ----------------------------------------------- 11 - budget page --------------------------------------------------------*/  
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #4A6F4E; /* Adjust color to match the budget page theme */
+  font-family: 'KCBeebosloth';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.budget-page {
+  background-image: url('../images/gradient_3.png');
+}
+
+.budget-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.budget-header { /*titleee*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+
+.header-title {
+  width: 100px;
+  height: auto;
+}
+
+.budget-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  padding: 20px;
+}
+
+.add-budget-icon {
+  font-size: 2rem;
+  color: hsl(130, 33%, 96%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.new-budget-btn, .settle-budget-btn {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #4A6F4E;
+  opacity: 0.4;
+  color: hsl(129, 64%, 98%);
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.budget-list {
+  background-color: #4A6F4E;
+  opacity: 0.4;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.budget-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.budget-list li {
+  font-size: 1.2rem;
+  color: hsl(150, 33%, 99%);
+  margin: 5px 0;
+}
+
+.safe-icon img {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.budget-details {
+  width: 55%;
+  padding: 20px;
+  background-color: #4A6F4E;
+  opacity: 0.4;
+  border-radius: 8px;
+}
+
+.budget-info {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+/* ----------------------------------------------- 12 - fixed bills page --------------------------------------------------------*/  
+
+
+.bills-page {
+  background-image: url('../images/gradient_3.png');
+}
+
+.bills-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.bills-header { /*titleee*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.bills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4A6F4E;
+  margin-right: 10px;
+}
+
+.header-bow {
+  width: 25px;
+  height: auto;
+}
+
+.calendar-section {
+  width: 60%;
+  padding: 20px;
+  background-color: #4A6F4E;
+  opacity: 0.4;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 99%);
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.calendar-body div {
+  padding: 10px;
+  text-align: center;
+  color: #4A6F4E;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.bills-details {
+  width: 35%;
+  padding: 20px;
+  background-color: hsl(135, 15%, 95%);
+  opacity: 0.4;
+  border-radius: 8px;
+}
+
+.add-bill-icon {
+  font-size: 2rem;
+  color: #4A6F4E;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.new-bill-btn {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #D0E2C2;
+  color: #4A6F4E;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bill-info {
+  font-size: 1.1rem;
+  color: #4A6F4E;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+/* ----------------------------------------------- 13 - goals page --------------------------------------------------------*/  
+.goals-page {
+  background-image: url('../images/gradient_3.png');
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+
+}
+
+.goals-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.goals-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+.goals-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4A6F4E;
+  margin-right: 10px;
+}
+
+.header-bow {
+  width: 200px;
+  height: auto;
+}
+
+.goals-list {
+  width: 30%;
+  padding: 20px;
+  background-color: #F4F9E9;
+  opacity: 0.4;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.goal-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.goal-items li {
+  margin: 10px 0;
+  padding: 8px;
+  color: #4A6F4E;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.goal-details {
+  width: 50%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  opacity: 0.4;
+  border-radius: 8px;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #4A6F4E;
+}
+
+.category-icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.category-icons img {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+}
+
+
+
+/* ----------------------------------------------- 14 - debits page --------------------------------------------------------*/  
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'KCBeebosloth';
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.debits-page {
+  display: flex;
+  justify-content: center;
+  background-image: url('../images/gradient.png');
+  align-items: center;
+  height: 100vh;
+  font-family: 'KCBeebosloth';
+  color: hsl(0, 0%, 98%);
+}
+
+/* Header for titles */
+.header_for_title_debits {
+  position: absolute;
+  top: 100px;
+  left: 500px;
+}
+
+.debits_title_image{
+  width: 100px;
+  height: auto;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Menu */
+.menu_debits {
+  display: flex;
+  flex-direction: flex;
+  gap: 50px;
+  margin-left: 40px;
+}
+
+.menu h2 {
+  font-family: 'KCBeebosloth', sans-serif;
+  font-size: 2.5rem;
+  color: hwb(0 100% 0%);
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu h2:hover {
+  color: #ff8aa3;
+  transform: translateX(10px);
+}
+
+/* footer */
+.footer_balance {
+  position:absolute;
+  right: 500px;
+  top: 500px;
+  margin-bottom: 40px;
+
+}
+
+.footer_balance img {
+  width: 140px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* ----------------------------------------------- 15 - loans page --------------------------------------------------------*/  
+
+
+/* Background and Layout */
+.loans_page {
+  background-image: url('../images/gradient_5.png');
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+
+
+.dashboard {
+  width: 80%;
+  max-width: 900px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #b14d6b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.header-icons img {
+  width: 30px;
+  margin: 0 10px;
+  position: absolute;
+  top: -10px;
+}
+
+/* Loan Details Section */
+.loan-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Loan Summary */
+.loan-summary {
+  width: 60%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px 30px;
+  font-size: 18px;
+  color: #3a5c44;
+}
+
+.label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.value {
+  text-align: right;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 20px;
+  margin-top: 15px;
+}
+
+.progress {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-loan {
+  background-color: #f5f5f5;
+  border: 1px solid #b14d6b;
+  color: #b14d6b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.new-loan:hover {
+  background-color: #b14d6b;
+  color: white;
+}
+
+.loan-list {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  max-width: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #3a5c44;
+  font-weight: bold;
+}
+
+.loan-list p {
+  margin: 8px 0;
+}
+
+.loan-image {
+  width: 60px;
+  margin-top: 20px;
+}
+
+
+/* ----------------------------------------------- 16 - check list page --------------------------------------------------------*/  
+.check_list_page {
+  background-image: url('../images/gradient_2.png');
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.checklist-container {
+  background-color: hsl(120, 100%, 99%);
+  opacity: 0.8;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+.checklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.checklist-header h2 {
+  font-size: 24px;
+  color: #4A6F4E;
+}
+.checklist-header .new-button {
+  background-color: #4A6F4E;
+  opacity: 0.8;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.goal-checklist {
+  margin-top: 15px;
+}
+.goal-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eccce2;
+}
+.goal-item input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.goal-item label {
+  flex-grow: 1;
+  color: hsl(317, 100%, 1%);
+  font-size: 16px;
+}
+.goal-item .delete-button {
+  background-color: hsl(0, 85%, 77%);
+  border: none;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fotter_image_check_list {
+  width: 10px; /* Set width */
+  height: auto;
+  margin: 10px; 
+}
+
+/* ----------------------------------------------- 17 - analytics page --------------------------------------------------------*/  
+
+.analytics_page {
+  background-image: url('../images/gradient_7.png');
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+
+/* Background and Layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.analytics-dashboard {
+  width: 80%;
+  max-width: 900px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #b14d6b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.header-icons img {
+  width: 30px;
+  margin: 0 10px;
+  position: absolute;
+  top: -10px;
+}
+
+/* Selection Section */
+.selection-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.selection-box {
+  width: 30%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.selection-box h2 {
+  font-size: 20px;
+  color: #3a5c44;
+  margin-bottom: 10px;
+}
+
+.category-list, .calendar-box {
+  color: #3a5c44;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.category-list p {
+  margin: 8px 0;
+}
+
+/* Date Picker Styling */
+.date-picker {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #3a5c44;
+  border-radius: 5px;
+  color: #3a5c44;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.date-picker:focus {
+  outline: none;
+  border-color: #285636;
+}
+
+/* Add Button */
+.add-button_analytics {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#addBtn {
+  font-size: 24px;
+  color: #b14d6b;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #b14d6b;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  background: #b14d6b;
+  color: white;
+}
+
+/* Go Button */
+.go-button {
+  margin-top: 30px;
+}
+
+.go-button button {
+  padding: 10px 20px;
+  background-color: #3a5c44;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.go-button button:hover {
+  background-color: #285636;
+}
+
+/* Analytics Result Section */
+.analytics-result {
+  margin-top: 20px;
+  color: #3a5c44;
+  font-size: 20px;
+}

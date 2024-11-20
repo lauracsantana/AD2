@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goals</title>
+        <link rel="icon" type="image/x-icon" href="../images/small_logo1.png" />
+        <link rel="stylesheet" href="/src/main/resources/static/css/styles.css">
+    </head>
+
+    <body class="goals-page">
+        <!-- Header Section -->
+        <div class="goals-header">
+            <img src="../images/goals_title.png" alt="goals_title" class="header-bow">
+        </div> 
+
+        <div class="goals-container">
+            <!-- Left Side: Goal List -->
+            <div class="goals-list">
+                <button class="add-goal-icon">+</button>
+                <button class="new-goal-btn">NEW</button>
+                <div class="goal-items">
+                    <ul>
+                        <li onclick="displayGoal('lvBag')">LV BAG</li>
+                        <li onclick="displayGoal('norway')">NORWAY</li>
+                        <li onclick="displayGoal('drive')">DRIVE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Goal Details -->
+            <div class="goal-details">
+                <p><span class="info-label">NAME</span> <span id="goal-name">NORWAY</span></p>
+                <p><span class="info-label">AMOUNT</span> <span id="goal-amount">250 / 1,500</span></p>
+                <p><span class="info-label">SET DATE</span> <span id="goal-date">05 12 2025</span></p>
+                <p><span class="info-label">OBS</span> <span id="goal-obs">NEW YEARS NORTHERN LIGHTS IN TROMSO</span></p>
+            </div>
+        </div>
+        
+            <!-- Category Icons Section -->
+            <div class="category-icons">
+                <img src="../images/pig_shopping.png" alt="pig shopping">
+                <img src="../images/pig_credit_card.png" alt="pig credit card">
+                <img src="../images/pig_house.png" alt="pig house">
+                <img src="../images/pig_travel.png" alt="pig travel">
+                <img src="../images/pig_car.png" alt="pig car">
+
+            
+            </div>
+
+        <script src="../js/script.js"></script>
+    </body>
+    </html>
+    

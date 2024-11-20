@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Analytics </title>
+        <link rel="icon" type="image/x-icon" href="../images/small_logo1.png" />
+        <link rel="stylesheet" href="/src/main/resources/static/css/styles.css">
+    </head>
+
+    <body class="analytics_page">
+            <!-- Header Section -->
+            <header>
+                <div class="analytisc_title">
+                    <img src="../images/analytics_title.png" alt="analytics title">
+
+                </div>
+            </header>        
+            
+            <div class="analytics-dashboard">
+
+    
+            <!-- Selection Section -->
+            <section class="selection-section">
+                <!-- Category Selection -->
+                <div class="selection-box">
+                    <h2>Category</h2>
+                    <div class="category-list">
+                        <p>DRINKS</p>
+                        <p>CLOTHES</p>
+                        <p>FOOD</p>
+                    </div>
+                </div>
+    
+                <!-- Center Add Button -->
+                <div class="add-button_analytics">
+                    <button id="addBtn">+</button>
+                </div>
+    
+                <!-- Time Slot Selection -->
+                <div class="selection-box">
+                    <h2>Time Slot</h2>
+                    <div class="calendar-box">
+                        <input type="date" id="timeSlotDate" class="date-picker">
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Go Button -->
+            <div class="go-button">
+                <button onclick="showAnalytics()">Let's Go</button>
+            </div>
+    
+            <!-- Placeholder for Analytics Result -->
+            <div id="analyticsResult" class="analytics-result">
+                <!-- This is where the analysis result will be displayed -->
+            </div>
+        </div>
+    
+        <script src="../js/script.js"></script>
+    </body>
+</html>
