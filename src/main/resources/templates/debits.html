@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <!-- Resolve favicon path using Thymeleaf -->
+        <link th:href="@{/images/small_logo1.png}" rel="icon" type="image/x-icon" />
+        <!-- Resolve CSS path using Thymeleaf -->
+        <link th:href="@{/css/styles.css}" rel="stylesheet">
+    </head>
+    <body class="debits-page">
+
+        <!-- Title Section -->
+        <div class="header_for_title_debits">
+            <div class="debits_title_image">
+                <!-- Resolve image path using Thymeleaf -->
+                <img th:src="@{/images/debits_title.png}" alt="debits_title">
+            </div>    
+        </div>
+
+        <div class="container">
+
+            <!-- Navigation Options -->
+            <div class="menu_debits">
+                <h2> <a th:href="@{/check_list.html}" class="nav-link"> CHECK LISTS </a></h2>
+                <h2> <a th:href="@{/loans.html}" class="nav-link"> LOANS </a></h2>
+            </div>
+
+        </div>
+
+        <!-- Footer Image -->
+        <div class="footer_balance">
+            <!-- Resolve image path using Thymeleaf -->
+            <img th:src="@{/images/balance.png}" alt="footer_balance">
+        </div>
+
+    </body>
+</html>

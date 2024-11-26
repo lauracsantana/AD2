@@ -1,13 +1,13 @@
-package com.example.ad2.entity;
-
-import java.time.LocalDate;
+package com.example.ad2.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
+
 public class User {
 
     @Id
@@ -16,12 +16,11 @@ public class User {
 
     private String email;
     private String password;
-    private LocalDate dateOfBirth; // Use LocalDate for Date of Birth
+    private LocalDate dateOfBirth;
     private String phoneNumber;
-    private String aircode; // New field for aircode
+    private String aircode;
 
-    // Getters and Setters
-
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -69,6 +68,4 @@ public class User {
     public void setAircode(String aircode) {
         this.aircode = aircode;
     }
-
-}//class
-
+}

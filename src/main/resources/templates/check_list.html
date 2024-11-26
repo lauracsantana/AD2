@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals</title>
+    <!-- Resolve favicon path using Thymeleaf -->
+    <link th:href="@{/images/small_logo1.png}" rel="icon" type="image/x-icon" />
+    <!-- Resolve CSS path using Thymeleaf -->
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+
+<body class="check_list_page">
+    <!-- Header Section -->
+    <div class="check-list-header">
+        <!-- Resolve image path using Thymeleaf -->
+        <img th:src="@{/images/check_list_title.png}" alt="check list title" class="header-check_list">
+    </div> 
+
+    <div class="checklist-container">
+        <!-- Header -->
+        <div class="checklist-header">
+            <!-- Add new goal button -->
+            <button class="new-button" onclick="addNewGoal()">+ New Goal</button>
+        </div>
+    
+        <!-- Goal Checklist Items -->
+        <div class="goal-checklist" id="goalChecklist">
+            <!-- Existing goals will be loaded here -->
+        </div>
+    </div>
+
+    <!-- JavaScript for Dynamic Checklist -->
+    <script>
+        // Load goals from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGoals();
+        });
+
+        // Load goals and restore their state
+        function loadGoals() {
+            const goals = JSON.parse(localStorage.getItem('goals')) || [];
+            const checklistContainer = document.getElementById('goalChecklist');
+            checklistContainer.innerHTML = ''; // Clear current list
+
+            goals.forEach((goal, index) => {
+                addGoalToDOM(goal.text, goal.completed, index);
+            });
+        }
+
+        // Add new goal to the checklist
+        function addNewGoal() {
+            const goalText = prompt("Enter your goal:");
+            if (goalText) {
+                const goals = JSON.parse(localStorage.getItem('goals')) || [];
+                const newGoal = { text: goalText, completed: false };
+                goals.push(newGoal);
+                localStorage.setItem('goals', JSON.stringify(goals));
+                addGoalToDOM(goalText, false, goals.length - 1);
+            }
+        }
+
+        // Add goal to DOM and attach necessary event listeners
+        function addGoalToDOM(text, completed, index) {
+            const checklistContainer = document.getElementById('goalChecklist');
+
+            const goalItem = document.createElement('div');
+            goalItem.classList.add('goal-item');
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = completed;
+            checkbox.addEventListener('change', () => toggleGoalCompletion(index));
+
+            const label = document.createElement('label');
+            label.textContent = text;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.classList.add('delete-button');
+            deleteButton.addEventListener('click', () => deleteGoal(index));
+
+            goalItem.appendChild(checkbox);
+            goalItem.appendChild(label);
+            goalItem.appendChild(deleteButton);
+            checklistContainer.appendChild(goalItem);
+        }
+
+        // Toggle completion status of a goal
+        function toggleGoalCompletion(index) {
+            const goals = JSON.parse(localStorage.getItem('goals'));
+            goals[index].completed = !goals[index].completed;
+            localStorage.setItem('goals', JSON.stringify(goals));
+        }
+
+        // Delete a goal from the checklist
+        function deleteGoal(index) {
+            let goals = JSON.parse(localStorage.getItem('goals'));
+            goals.splice(index, 1);
+            localStorage.setItem('goals', JSON.stringify(goals));
+            loadGoals(); // Reload the updated goals list
+        }
+    </script>
+
+    <!-- Footer Image -->
+    <div class="fotter_image_check_list">
+        <!-- Resolve image path using Thymeleaf -->
+        <img th:src="@{/images/modey_and_coins.png}" alt="coins_bills">
+    </div>
+</body>
+</html>

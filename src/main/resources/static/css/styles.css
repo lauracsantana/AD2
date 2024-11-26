@@ -45,88 +45,85 @@ body, html {
   text-decoration: none;
 }
 /* ----------------------------------------------- 2- index - initial page  --------------------------------------------------------*/  
-
 @font-face {
   font-family: 'KCBubbleShack';
-  src: url('../fonts/KCBubbleShack.otf') format('truetype')
+  src: url('/fonts/KCBubbleShack.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'KCBeebosloth';
-  src: url('../fonts/KCBeebosloth.otf') format('truetype');
+  src: url('/fonts/KCBeebosloth.otf') format('truetype');
 }
 
-
 * {
-    margin: 10;
-    padding: 10;
-    box-sizing: border-box;
-  }
-  
-  body {
+  margin: 10;
+  padding: 10;
+  box-sizing: border-box;
+}
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .body_index-page{
-    font-family: 'KCBeebosloth',Arial, Helvetica, sans-serif;
-    background-image: url('../images/gradient_3.png');
-  }
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .container_index {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Logo/Header Styling */
-  .header .logo {
-    width: 400px;
-    margin-bottom: 20px;
-  }
-  
-  /* Navigation Links Styling */
-  .nav-options {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-  }
-  
-  .nav-link {
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover {
-    color: #ffb6c1;
-  }
-  
-  /* Footer */
-  .footer_index {
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  
-  .footer_image_girls_have_funds {
-    height: 0.2px;
-    bottom: 20px;
-    margin-top: 60px;
+.body_index-page {
+  font-family: 'KCBeebosloth', Arial, Helvetica, sans-serif;
+  background-image: url('/images/gradient_3.png');
+}
 
-  }
+.container_index {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Logo/Header Styling */
+.header .logo {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Navigation Links Styling */
+.nav-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffb6c1;
+}
+
+/* Footer */
+.footer_index {
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer_image_girls_have_funds {
+  height: 0.2px;
+  bottom: 20px;
+  margin-top: 60px;
+}
+
 
 
 /* ----------------------------------------------- 3- login page --------------------------------------------------------*/  

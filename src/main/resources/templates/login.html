@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <link rel="icon" type="image/x-icon" th:href="@{/images/small_logo1.png}" />
+        <link th:href="@{/css/styles.css}" rel="stylesheet">
+    </head>
+    <body class="body_login-page">
+        <div class="logo">
+            <a th:href="@{/another_day_another_dollar/index}">
+                <img th:src="@{/images/logo_vertical.png}" alt="Another Day Another Dollar" />
+            </a>       
+        </div>
+        
+        <div class="login-container">
+            <h1 class="welcome-text">LOOK WHO IS BACK</h1>
+            
+            <form class="login-form" th:action="@{/another_day_another_dollar/login}" method="post">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" placeholder="your-email@example.com" required>
+                
+                <label for="password">SUPER SECRET PASSWORD</label>
+                <input type="password" id="password" name="password" placeholder="********" required>
+                
+                <button type="submit" class="submit-button">LET'S GO</button>
+            </form>
+        </div>
+    </body>
+</html>

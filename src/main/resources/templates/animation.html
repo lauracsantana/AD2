@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falling Money Animation</title>
+  <!-- Resolve CSS path using Thymeleaf -->
+  <link th:href="@{/css/styles.css}" rel="stylesheet">
+  <!-- Resolve favicon path using Thymeleaf -->
+  <link th:href="@{/images/small_logo1.png}" rel="icon" type="image/x-icon" />
+</head>
+<body>
+  <!-- Link to home page (use Thymeleaf for path resolution) -->
+  <a th:href="@{/index.html}" class="full-page-link" aria-label="Go to home page"></a>
+  
+  <!-- Container for the falling money animation -->
+  <div class="falling-money-container"></div>
+
+  <!-- Resolve JS path using Thymeleaf -->
+  <script th:src="@{/js/script.js}"></script>
+</body>
+</html>

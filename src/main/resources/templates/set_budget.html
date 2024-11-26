@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgets</title>
-    <link rel="icon" type="image/x-icon" href="../images/small_logo1.png" />
-    <link rel="stylesheet" href="/src/main/resources/static/css/styles.css">
-
+    <link rel="icon" type="image/x-icon" th:href="@{/images/small_logo1.png}" />
+    <!-- Use Thymeleaf to resolve the path for your CSS file -->
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
 </head>
 
 <body class="budget-page">
     <!-- Header Section -->
     <div class="budget-header">
-        <img src="../images/budget_title.png" alt="Bow" class="header-title">
+        <!-- Use Thymeleaf to resolve the image source -->
+        <img th:src="@{/images/budget_title.png}" alt="Bow" class="header-title">
     </div>
 
     <div class="budget-container">
@@ -33,7 +34,8 @@
 
             <!-- Safe Icon -->
             <div class="safe-icon">
-                <img src="../images/small_safe.png" alt="Safe Icon">
+                <!-- Use Thymeleaf to resolve the image source -->
+                <img th:src="@{/images/small_safe.png}" alt="Safe Icon">
             </div>
         </div>
 

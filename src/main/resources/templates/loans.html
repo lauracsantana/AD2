@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Loans</title>
-        <link rel="icon" type="image/x-icon" href="../images/small_logo1.png" />
-        <link rel="stylesheet" href="/src/main/resources/static/css/styles.css">
+        <link th:href="@{/images/small_logo1.png}" rel="icon" type="image/x-icon" />
+        <link th:href="@{/css/styles.css}" rel="stylesheet">
     </head>
     <body class="loans_page">
         <header>
             <div class="loans-header">
-                <img src="../images/loans_title.png" alt="loans_title" class="header-bow">
+                <img th:src="@{/images/loans_title.png}" alt="loans_title" class="header-bow">
             </div>
         </header>
 
@@ -19,39 +19,42 @@
             <section class="loan-details">
                 <div class="loan-summary">
                     <div class="details-grid">
+                        <!-- Dynamic Loan Data -->
                         <div class="label">COLLEGE</div>
-                        <div class="value">AMOUNT 8.000</div>
+                        <div class="value" th:text="${loan.name}">COLLEGE</div>
+
+                        <div class="label">AMOUNT</div>
+                        <div class="value" th:text="${loan.amount}">8,000</div>
 
                         <div class="label">PARCELS</div>
-                        <div class="value">101 X 86.05</div>
+                        <div class="value" th:text="${loan.parcels}">101 X 86.05</div>
 
                         <div class="label">INTERESTS</div>
-                        <div class="value">691.05</div>
+                        <div class="value" th:text="${loan.interests}">691.05</div>
 
                         <div class="label">TOTAL</div>
-                        <div class="value">8 691.05</div>
+                        <div class="value" th:text="${loan.total}">8,691.05</div>
 
                         <div class="label">PAID</div>
-                        <div class="value">6 402.40</div>
+                        <div class="value" th:text="${loan.paid}">6,402.40</div>
 
                         <div class="label">LEFT</div>
-                        <div class="value">2 288.65</div>
+                        <div class="value" th:text="${loan.left}">2,288.65</div>
                     </div>
-                    
+
                     <!-- Progress Bar -->
                     <div class="progress-bar">
-                        <div class="progress" style="width: 73%;"></div>
+                        <div class="progress" th:style="'width: ' + ${loan.progressPercentage} + '%'"></div>
                     </div>
                 </div>
-                
+
                 <!-- Right Section for Controls and Image -->
                 <div class="controls">
                     <button class="new-loan">+ NEW</button>
                     <div class="loan-list">
-                        <p>COLLEGE</p>
-                        <p>TRAVEL</p>
+                        <p th:each="loan : ${loans}" th:text="${loan.name}">COLLEGE</p>
                     </div>
-                    <img src="../images/loans_hand_bag.png" alt="Loan Icon" class="loan-image">
+                    <img th:src="@{/images/loans_hand_bag.png}" alt="Loan Icon" class="loan-image">
                 </div>
             </section>
         </div>

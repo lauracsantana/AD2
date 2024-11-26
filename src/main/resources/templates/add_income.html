@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Income</title>
-    <link rel="icon" type="image/x-icon" href="../images/small_logo1.png" />
-    <link rel="stylesheet" href="/src/main/resources/static/css/styles.css">
+    <!-- Thymeleaf resource resolution for favicon and CSS -->
+    <link rel="icon" type="image/x-icon" th:href="@{/images/small_logo1.png}" />
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
 </head>
 
 <body class="add-income-page">
@@ -14,10 +15,9 @@
         <span class="header-title">INCOME</span>
     </div>
 
-    
     <div class="container_add-income">
         <!-- Form Section -->
-        <form class="income-form">
+        <form class="income-form" th:action="@{/another_day_another_dollar/add-income}" method="post">
             <label for="amount">AMOUNT</label>
             <input type="text" id="amount" name="amount" placeholder="115.00">
 
@@ -32,14 +32,15 @@
 
             <label for="comments">COMMENTS</label>
             <input type="text" id="comments" name="comments" placeholder="TIPS WEEK 41">
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">ADD INCOME</button>
         </form>
     </div>
 
-
-
     <!-- Piggy Bank Icon -->
     <div class="piggy-bank-icon">
-        <img src="../images/pig_bank_green.png" alt="Piggy bank with dollar coin">
+        <img th:src="@{/images/pig_bank_green.png}" alt="Piggy bank with dollar coin">
     </div>
 
 </body>

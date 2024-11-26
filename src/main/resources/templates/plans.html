@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Plans</title>
+        <link rel="icon" type="image/x-icon" href="../images/small_logo1.png" />
+        <!-- Use Thymeleaf to resolve the path for your CSS file -->
+        <link th:href="@{/css/styles.css}" rel="stylesheet">
+    </head>
+    <body class="plans-page">
+        <div class="plans-container">
+            <h1>Money Often Costs Too Much<br>Luckily, We Don't</h1>
+            
+            <div class="premium-info">
+                <p>Premium Plans</p>
+                <p>Full Access</p>
+            </div>
+
+            <div class="plan-options">
+                <div class="plan">
+                    <h2>Basic</h2>
+                    <p>€ 0.00</p>
+                </div>
+                <div class="plan">
+                    <h2>Monthly</h2>
+                    <p>€ 5.99</p>
+                </div>
+                <div class="plan">
+                    <h2>Year</h2>
+                    <p>€ 60.00</p>
+                </div>
+            </div>
+
+            <div class="footer_image_plans">
+                <!-- Use Thymeleaf for dynamic href and image source resolution -->
+                <a th:href="@{/another_day_another_dollar/index}">
+                    <img th:src="@{/images/logo_hotizontal.png}" alt="Another Day Another Dollar" class="logo">
+                </a>       
+            </div>
+            
+        </div>
+    </body>
+</html>

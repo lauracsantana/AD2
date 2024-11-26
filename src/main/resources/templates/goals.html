@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goals</title>
+        <link th:href="@{/images/small_logo1.png}" rel="icon" type="image/x-icon" />
+        <link th:href="@{/css/styles.css}" rel="stylesheet">
+    </head>
+
+    <body class="goals-page">
+        <!-- Header Section -->
+        <div class="goals-header">
+            <img th:src="@{/images/goals_title.png}" alt="goals_title" class="header-bow">
+        </div> 
+
+        <div class="goals-container">
+            <!-- Left Side: Goal List -->
+            <div class="goals-list">
+                <button class="add-goal-icon">+</button>
+                <button class="new-goal-btn">NEW</button>
+                <div class="goal-items">
+                    <ul>
+                        <!-- Iterate through goals dynamically -->
+                        <li th:each="goal : ${goals}" th:text="${goal.name}" th:onclick="'displayGoal(' + ${goal.id} + ')'" />
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Goal Details -->
+            <div class="goal-details">
+                <p><span class="info-label">NAME</span> <span id="goal-name" th:text="${goal.name}">NORWAY</span></p>
+                <p><span class="info-label">AMOUNT</span> <span id="goal-amount" th:text="${goal.amount + ' / ' + goal.targetAmount}">250 / 1,500</span></p>
+                <p><span class="info-label">SET DATE</span> <span id="goal-date" th:text="${goal.setDate}">05 12 2025</span></p>
+                <p><span class="info-label">OBS</span> <span id="goal-obs" th:text="${goal.obs}">NEW YEARS NORTHERN LIGHTS IN TROMSO</span></p>
+            </div>
+        </div>
+        
+        <!-- Category Icons Section -->
+        <div class="category-icons">
+            <img th:src="@{/images/pig_shopping.png}" alt="pig shopping">
+            <img th:src="@{/images/pig_credit_card.png}" alt="pig credit card">
+            <img th:src="@{/images/pig_house.png}" alt="pig house">
+            <img th:src="@{/images/pig_travel.png}" alt="pig travel">
+            <img th:src="@{/images/pig_car.png}" alt="pig car">
+        </div>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>

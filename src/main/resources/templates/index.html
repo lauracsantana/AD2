@@ -6,15 +6,16 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Another Day, Another Dollar</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="images/small_logo1.png" />
+        <!-- logo icon-->
+        <link rel="icon" type="image/x-icon" th:href="@{/images/small_logo1.png}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/css/styles.css" rel="stylesheet" />
+        <link th:href="@{/css/styles.css}" rel="stylesheet">
+
     </head>
  
     <body class="body_index-page">
@@ -22,26 +23,30 @@
         <!-- Header with Logo/Title -->
         <div class="header">
 
-          <a href="index.html">
-            <img src="../static/images/logo_hotizontal.png"  alt="Another Day Another Dollar" class="logo">
+          <a th:href="@{/another_day_another_dollar/index}">
+            <img th:src="@{/images/logo_hotizontal.png}" alt="Another Day Another Dollar" class="logo">
           </a>       
         </div>
 
         <!-- Navigation Options -->
         <div class="nav-options">
-          <a href="pages/login.html" class="nav-link">LOGIN</a>
-          <a href="pages/create_account.html" class="nav-link">CREATE ACCOUNT</a>
-          <a href="pages/plans.html" class="nav-link">PLANS</a>
+          <a th:href="@{/another_day_another_dollar/login}" class="nav-link">LOGIN</a>
+          <a th:href="@{/another_day_another_dollar/createAccount}" class="nav-link">CREATE ACCOUNT</a>
+          <a th:href="@{/another_day_another_dollar/plans}" class="nav-link">PLANS</a>
         </div>
+
 
         <!-- Decorative Footer Message -->
         <div class="footer_index">
           <div class="footer_image_girls_have_funds">
-            <img src="../static/images/girls_just_wanna_have_funds.png" alt="girls_just_wanna_have_funds">
+            <img th:src="@{/images/girls_just_wanna_have_funds.png}" alt="girls_just_wanna_have_funds">
           </div>
         </div>
 
       </div> <!--container -->
+
+      <!-- Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

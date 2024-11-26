@@ -1,13 +1,36 @@
-// package com.example.ad2.controllers;
+package com.example.ad2.controllers;
 
-// import org.springframework.stereotype.Controller;
-// import org.springframework.ui.Model;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-// @Controller
-// public class HomeController {
-//     public String index(Model model){
+@Controller
+@RequestMapping(path ="/another_day_another_dollar") 
+public class HomeController {
+    
+    @GetMapping("/homePage")
+    public String showHomePage() {
+        return "homePage"; 
+    }
+    
+    @GetMapping("/expenses")
+    public String showHomeExpensesPage() {
+        return "expenses"; 
+    }
 
-//         model.addAttribute("nome, Laura");
-//         return "home/index";
-//     }
-// }
+    @GetMapping("/planning")
+    public String showHomePlanningPage() {
+        return "planning"; 
+    }
+
+    @GetMapping("/debits")
+    public String showHomeDebitsPage() {
+        return "debits"; 
+    }
+
+    @GetMapping("/analytics")
+    public String showHomeAnalyticsPage() {
+        return "analytics"; 
+    }
+
+}

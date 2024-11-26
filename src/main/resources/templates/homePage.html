@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <!-- Dynamic Thymeleaf resource resolution -->
+        <link rel="icon" type="image/x-icon" th:href="@{/images/small_logo1.png}" />
+        <link th:href="@{/css/styles.css}" rel="stylesheet">
+    </head>
+    <body class="home-page">
+
+        <!-- Logo Section -->
+        <div class="header_for_logo">
+            <div class="logo">
+                <img th:src="@{/images/small_logo1.png}" alt="AD2 Logo">
+            </div>    
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Navigation Options -->
+            <div class="menu_home_page">
+                <h2><a th:href="@{/another_day_another_dollar/expenses}" class="nav-link">EXPENSES</a></h2>
+                <h2><a th:href="@{/another_day_another_dollar/planning}" class="nav-link">PLANNING</a></h2>
+                <h2><a th:href="@{/another_day_another_dollar/debits}" class="nav-link">DEBITS</a></h2>
+                <h2><a th:href="@{/another_day_another_dollar/analytics}" class="nav-link">ANALYTICS</a></h2>
+            </div>
+
+            <!-- Floating Cash and Coins -->
+            <div class="coins_bills">
+                <img th:src="@{/images/coins_bills.png}" alt="Coins and Bills">
+            </div>
+        </div>
+
+    </body>
+</html>
