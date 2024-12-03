@@ -28,44 +28,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // -------------------------------------- bills page -----------------------------------------------------------
+document.getElementById('fetchEventsBtn').addEventListener('click', fetchGoogleCalendarEvents);
 
-const calendar = document.getElementById('calendarBody');
-const monthYear = document.getElementById('monthYear');
-let date = new Date();
-let currentMonth = date.getMonth();
-let currentYear = date.getFullYear();
+function fetchGoogleCalendarEvents() {
+    fetch('/api/calendar/events')
+        .then(response => response.json())
+        .then(events => {
+            const eventsContainer = document.getElementById('eventsContainer');
+            eventsContainer.innerHTML = ''; // Clear previous events
 
-function generateCalendar(month, year) {
-    calendar.innerHTML = ''; // Clear previous calendar
-    monthYear.innerHTML = `${new Date(year, month).toLocaleString('default', { month: 'long' })} ${year}`;
-
-    const firstDay = new Date(year, month).getDay();
-    const daysInMonth = 32 - new Date(year, month, 32).getDate();
-
-    // Create empty cells for days before the start of the month
-    for (let i = 0; i < firstDay; i++) {
-        calendar.innerHTML += `<div></div>`;
-    }
-
-    // Create cells for each day of the month
-    for (let day = 1; day <= daysInMonth; day++) {
-        calendar.innerHTML += `<div>${day}</div>`;
-    }
+            if (events.length === 0) {
+                eventsContainer.innerHTML = '<p>No upcoming events found.</p>';
+            } else {
+                events.forEach(event => {
+                    const eventElement = document.createElement('p');
+                    const start = event.start.dateTime || event.start.date; // Use dateTime if available
+                    eventElement.textContent = `${start}: ${event.summary}`;
+                    eventsContainer.appendChild(eventElement);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching Google Calendar events:', error);
+            document.getElementById('eventsContainer').innerHTML = '<p>Error loading events.</p>';
+        });
 }
 
-function prevMonth() {
-    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    currentYear = (currentMonth === 11) ? currentYear - 1 : currentYear;
-    generateCalendar(currentMonth, currentYear);
-}
-
-function nextMonth() {
-    currentMonth = (currentMonth === 11) ? 0 : currentMonth + 1;
-    currentYear = (currentMonth === 0) ? currentYear + 1 : currentYear;
-    generateCalendar(currentMonth, currentYear);
-}
-
-generateCalendar(currentMonth, currentYear);
 
 
 // -------------------------------------- analytics page ----------------------------------------------------------
