@@ -2,20 +2,22 @@ package com.example.ad2.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping(path ="/another_day_another_dollar") 
 public class PlanningController {
 
-    // Mapping for the Planning Page
-    @GetMapping("/planning")
-    public String showPlanningPage() {
-        return "planning"; 
-    }
+    // // Mapping for the Planning Page
+    // @GetMapping("/planning")
+    // public String showPlanningPage() {
+    //     return "planning"; 
+    // }
 
     // Mapping for the Budget Page
-    @GetMapping("/set_budget")
+    @GetMapping("/setBudget")
     public String showBudgetPage() {
-        return "set_budget";
+        return "setBudget";
     }
 
     // Mapping for the Bills Page
